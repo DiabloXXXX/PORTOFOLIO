@@ -1654,6 +1654,36 @@ footer {
   padding: 4px 10px;
 }
 
+.org-name {
+  font-family: "Space Mono", monospace;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 15px;
+}
+
+.org-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.org-highlights li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.org-highlights li::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  color: var(--accent-retro);
+  font-weight: 700;
+}
+
 /* Skills: Data Matrix */
 .skills-grid {
   display: grid;
@@ -1917,7 +1947,8 @@ footer {
   }
 
   .hero {
-    padding: 60px 0;
+    padding: 100px 0 60px 0;
+    /* Top padding for fixed navbar */
     grid-template-columns: 1fr;
     text-align: center;
     gap: 30px;
