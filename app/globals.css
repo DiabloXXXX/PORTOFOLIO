@@ -1013,7 +1013,8 @@ footer {
   }
 
   .hero-content p {
-    font-size: 0.9rem;
+    font-size: 1rem;
+    line-height: 1.5;
   }
 
   .section-title {
@@ -1043,6 +1044,13 @@ footer {
   max-width: 550px !important;
   overflow: hidden;
   font-family: "Space Mono", monospace !important;
+  z-index: 3000 !important;
+}
+
+[data-slot="dialog-overlay"] {
+  z-index: 2999 !important;
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  backdrop-filter: blur(2px);
 }
 
 .project-modal [data-slot="dialog-close"] {
@@ -1167,12 +1175,16 @@ footer {
 /* Mobile responsive for modal */
 @media (max-width: 768px) {
   .project-modal {
-    max-width: calc(100% - 40px) !important;
+    max-width: calc(100% - 30px) !important;
+    max-height: 85vh !important;
+    overflow-y: auto !important;
     box-shadow: 4px 4px 0px var(--text-primary) !important;
+    display: flex !important;
+    flex-direction: column !important;
   }
 
   .modal-title {
-    font-size: 1.4rem !important;
+    font-size: 1.3rem !important;
     padding: 15px 15px 0 15px;
   }
 
@@ -1183,6 +1195,7 @@ footer {
 
   .modal-image-container {
     padding: 10px 15px;
+    flex-shrink: 0;
   }
 
   .modal-project-image {
@@ -1196,11 +1209,29 @@ footer {
   .modal-footer {
     padding: 12px 15px 15px 15px !important;
     flex-direction: column !important;
+    background: var(--surface);
+    position: sticky;
+    bottom: 0;
+    z-index: 10;
+    border-top: 1px solid var(--border-color);
   }
 
   .modal-btn {
     width: 100%;
     text-align: center;
+  }
+
+  .project-modal [data-slot="dialog-close"] {
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
   }
 }
 

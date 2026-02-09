@@ -19,9 +19,24 @@ const _syne = Syne({
 })
 
 export const metadata: Metadata = {
-  title: "System.Ref - Creative Developer & Designer",
-  description: "Architecting digital experiences through a lens of brutalist minimalism and retro-futurism.",
-  generator: "v0.app",
+  title: "Yugi Indra Prakasa | Full Stack Developer & UI/UX Designer",
+  description: "Portfolio of Yugi Indra Prakasa - A Final Year IT Student at Universitas Gunadarma specializing in Full Stack Development, UI/UX Design, and Data Science. Open to internship opportunities.",
+  keywords: ["Yugi Indra Prakasa", "Full Stack Developer", "UI/UX Designer", "Data Science", "Portfolio", "Universitas Gunadarma", "Web Developer Indonesia"],
+  authors: [{ name: "Yugi Indra Prakasa" }],
+  creator: "Yugi Indra Prakasa",
+  openGraph: {
+    type: "website",
+    locale: "id_ID",
+    url: "https://yugiindra.vercel.app",
+    title: "Yugi Indra Prakasa | Full Stack Developer & UI/UX Designer",
+    description: "Portfolio of Yugi Indra Prakasa - A Final Year IT Student specializing in Full Stack Development, UI/UX Design, and Data Science.",
+    siteName: "Yugi Indra Prakasa Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Yugi Indra Prakasa | Full Stack Developer & UI/UX Designer",
+    description: "Portfolio of Yugi Indra Prakasa - Full Stack Development, UI/UX Design, and Data Science.",
+  },
   icons: {
     icon: [
       {
